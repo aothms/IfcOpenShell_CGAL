@@ -1,3 +1,5 @@
+#include "../../../ifcparse/IfcParse.h"
+
 #include "CgalKernel.h"
 #include "CgalConversionResult.h"
 
@@ -21,6 +23,6 @@ bool IfcGeom::CgalKernel::convert(const IfcSchema::IfcRepresentation* l, Convers
 	return part_succes;
 }
 
-bool IfcGeom::CgalKernel::convert(const Ifc2x3::IfcExtrudedAreaSolid*, cgal_shape_t&) {
+bool IfcGeom::CgalKernel::convert(const IfcSchema::IfcExtrudedAreaSolid*, cgal_shape_t&) {
 	throw std::runtime_error("Not implemented IfcExtrudedAreaSolid");
 }
